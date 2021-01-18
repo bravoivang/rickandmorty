@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Footer from '../Footer/Footer';
+import ContentPage from '../ContentPage/ContentPage';
+import Head from '../Head/Head';
+import './layout.css'
 
 const Layout = ({children, loading}) => {
+    debugger;
     return (
-        <div>
+        <div className="layout">
             <Head></Head>
-            <ContentPage loading={laoding}>
-                {children && children}
+            <p>Layout</p>
+            <ContentPage loading={loading}>
+                {children}
             </ContentPage>
+            <Footer/>
         </div>
     );
 };

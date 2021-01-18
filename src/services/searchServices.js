@@ -8,8 +8,14 @@ const selectSearch = () => {
     return search;
 }
 
-export const getCharacter = () => {
-
+export const getCharacter = (nameOfCharacter) => {
+    actionSearch.go(nameOfCharacter)
+    fetch(URL_BASE + '/character')
+    .then( response => response.json())
+    .then( (json) => {
+        console.log(json);
+    })
+    .catch( error => {console.log(error)});
 }
 
 export const getLocation = () => {
